@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shariq Usoof — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -20,6 +20,7 @@
       --white: #eaf4ff;
       --mono: 'Space Mono', monospace;
       --sans: 'Syne', sans-serif;
+      --body: 'DM Sans', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -128,7 +129,7 @@
     nav ul a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: color 0.2s;
@@ -196,7 +197,7 @@
       gap: 0.5rem;
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.7rem;
+      font-size: 0.85rem;
       letter-spacing: 0.08em;
       transition: color 0.2s;
       border: 1px solid var(--border);
@@ -225,7 +226,8 @@
     }
     .hero-name .dim { color: var(--muted); font-weight: 600; }
     .hero-bio {
-      font-size: 0.85rem;
+      font-family: var(--mono);
+      font-size: 1.2rem;
       line-height: 1.9;
       color: var(--text);
       max-width: 520px;
@@ -238,7 +240,7 @@
       align-items: center;
       gap: 0.4rem;
       margin-top: 1.5rem;
-      font-size: 0.68rem;
+      font-size: 0.8rem;
       letter-spacing: 0.08em;
       color: var(--muted);
       border: 1px solid var(--border);
@@ -331,16 +333,17 @@
     .skill-group:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-2px); }
     .skill-group:hover::before { opacity: 1; }
     .skill-group-title {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--white);
       margin-bottom: 1rem;
     }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .skill-tag {
-      font-size: 0.7rem;
-      padding: 0.3rem 0.7rem;
+      font-size: 0.85rem;
+      padding: 0.4rem 0.7rem;
       border: 1px solid var(--border);
       border-radius: 2px;
       color: var(--text);
@@ -386,7 +389,7 @@
     .project-card:hover::after { opacity: 1; }
 
     .project-type {
-      font-size: 0.6rem;
+      font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent);
@@ -394,14 +397,15 @@
     }
     .project-title {
       font-family: var(--sans);
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--white);
       margin-bottom: 0.7rem;
       letter-spacing: -0.01em;
     }
     .project-summary {
-      font-size: 0.72rem;
+      font-family: var(--body);
+      font-size: 0.95rem;
       line-height: 1.7;
       color: var(--muted);
     }
@@ -415,7 +419,7 @@
     }
     .project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
     .project-tag {
-      font-size: 0.58rem;
+      font-size: 0.75rem;
       padding: 0.2rem 0.5rem;
       background: rgba(0,119,255,0.1);
       border: 1px solid rgba(0,119,255,0.2);
@@ -509,7 +513,8 @@
       margin-bottom: 1.5rem;
     }
     .modal-body {
-      font-size: 0.82rem;
+      font-family: var(--body);
+      font-size: 0.95rem;
       line-height: 1.9;
       color: var(--text);
     }
@@ -537,7 +542,7 @@
       max-width: 100%;
     }
     footer span {
-      font-size: 0.65rem;
+      font-size: 0.8rem;
       letter-spacing: 0.08em;
       color: var(--muted);
     }
@@ -599,6 +604,12 @@
         </svg>
         GitHub
       </a>
+      <a class="linkedin-link" href="https://options.shariqusoof.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
+          <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8l-3.528-3.536-5.650 5.658-1.414-1.414 5.649-5.657L13 3h8z"/>
+        </svg>
+        View my latest deployment
+      </a>
     </div>
 
     <div class="hero-right reveal" style="transition-delay:0.15s">
@@ -626,57 +637,53 @@
         </div>
         <div class="skills-grid" style="grid-template-columns: repeat(3, 1fr);">
           <div class="skill-group reveal" style="transition-delay:0.05s">
-            <div class="skill-group-title">// Languages</div>
+            <div class="skill-group-title">Languages</div>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
               <span class="skill-tag">R</span>
+              <span class="skill-tag">SQL</span>
               <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">VBA</span>
-              <span class="skill-tag">HTML / CSS</span>
-              <span class="skill-tag">Linux</span>
             </div>
           </div>
           <div class="skill-group reveal" style="transition-delay:0.1s">
-            <div class="skill-group-title">// Databases</div>
-            <div class="skill-tags">
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">Oracle Database</span>
-              <span class="skill-tag">Amazon RDS</span>
-            </div>
-          </div>
-          <div class="skill-group reveal" style="transition-delay:0.15s">
-            <div class="skill-group-title">// Cloud & Engineering</div>
-            <div class="skill-tags">
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">Oracle Cloud</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Git</span>
-            </div>
-          </div>
-          <div class="skill-group reveal" style="transition-delay:0.2s">
-            <div class="skill-group-title">// Other Skills</div>
+            <div class="skill-group-title">Visualisation Tools</div>
             <div class="skill-tags">
               <span class="skill-tag">Power BI</span>
               <span class="skill-tag">Tableau</span>
-              <span class="skill-tag">Py Dash</span>
               <span class="skill-tag">R Shiny</span>
-              <span class="skill-tag">OpenAI API</span>
-              <span class="skill-tag">Gemini API</span>
-              <span class="skill-tag">LLM Integration</span>
+              <span class="skill-tag">Py Dash</span>
             </div>
           </div>
-          <div class="skill-group reveal" style="transition-delay:0.25s; grid-column: span 2;">
-            <div class="skill-group-title">// Finance & Quantitative</div>
+          <div class="skill-group reveal" style="transition-delay:0.15s">
+            <div class="skill-group-title">Cloud Deployment & Databases</div>
             <div class="skill-tags">
-              <span class="skill-tag">Excel / VBA</span>
-              <span class="skill-tag">MATLAB</span>
-              <span class="skill-tag">EViews</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Oracle Cloud</span>
+              <span class="skill-tag">Azure</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" style="transition-delay:0.2s">
+            <div class="skill-group-title">Machine Learning Models</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">Deep Learning</span>
+              <span class="skill-tag">Graph Neural Networks</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" style="transition-delay:0.25s">
+            <div class="skill-group-title">Financial Knowledge</div>
+            <div class="skill-tags">
               <span class="skill-tag">Financial Modelling</span>
-              <span class="skill-tag">Options Pricing</span>
-              <span class="skill-tag">Risk Analysis</span>
+              <span class="skill-tag">Portfolio Risk Analysis</span>
+              <span class="skill-tag">Volatility Modelling</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" style="transition-delay:0.3s">
+            <div class="skill-group-title">AI Integration</div>
+            <div class="skill-tags">
+              <span class="skill-tag">OpenAI API</span>
+              <span class="skill-tag">Gemini API</span>
+              <span class="skill-tag">Copilot API</span>
             </div>
           </div>
         </div>
@@ -692,6 +699,24 @@
         <div class="section-line"></div>
       </div>
       <div class="projects-grid">
+
+        <div class="project-card reveal" style="transition-delay:0.05s"
+          data-type="Quantitative Modelling / Software Engineering"
+          data-title="Options Pricing &amp; Analytics Platform"
+          data-body="&lt;p&gt;Built a full-stack options pricing web application that prices &lt;strong&gt;American-style options&lt;/strong&gt; using a Cox-Ross-Rubinstein (CRR) binomial tree. The app supports a 10-ticker watchlist with a live screener, per-ticker dashboards, and a contract analysis page showing fair value, pricing gap, and sensitivity curves.&lt;/p&gt;&lt;p&gt;The pricing engine includes &lt;strong&gt;implied volatility back-solving via bisection&lt;/strong&gt;, a blended realised volatility forecast (RV20/RV60), and &lt;strong&gt;Greeks computation&lt;/strong&gt; (Delta, Gamma, Theta, Vega) through finite differences on Black-Scholes. The app filters and ranks expiries by usability — checking strike distribution and IV availability — before presenting data to the user.&lt;/p&gt;&lt;p&gt;Engineered for cloud deployment on &lt;strong&gt;Render&lt;/strong&gt; with Gunicorn, featuring a custom &lt;strong&gt;TTL caching layer&lt;/strong&gt;, background cache pre-warming on startup, and callback splitting to avoid redundant recomputation.&lt;/p&gt;&lt;p style='margin-top:1.5rem;display:flex;gap:2rem;'&gt;&lt;a href='https://github.com/armagonthefirst/Dash-Options-Pricing' target='_blank' rel='noopener' style='color:var(--accent);text-decoration:none;font-size:0.85rem;letter-spacing:0.05em;'&gt;View on GitHub ↗&lt;/a&gt;&lt;a href='https://options.shariqusoof.com' target='_blank' rel='noopener' style='color:var(--accent);text-decoration:none;font-size:0.85rem;letter-spacing:0.05em;'&gt;Visit Live App ↗&lt;/a&gt;&lt;/p&gt;"
+          data-tags="Python,Dash,Plotly,yfinance,CRR Binomial Tree,Implied Volatility,Options Pricing,Greeks,Quantitative Finance,Cloud Deployment,Render,TTL Caching">
+          <div class="project-type">Quantitative Modelling / Software Engineering</div>
+          <div class="project-title">Options Pricing &amp; Analytics Platform</div>
+          <div class="project-summary">Deployed a live American options pricer and screener built with a CRR binomial tree, implied volatility back-solving, and Greeks across a 10-ticker watchlist.</div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Quantitative Finance</span>
+              <span class="project-tag">Dash</span>
+            </div>
+            <div class="expand-btn">View ↗</div>
+          </div>
+        </div>
 
         <div class="project-card reveal" style="transition-delay:0.05s"
           data-type="Finance / Analytics"
@@ -714,7 +739,7 @@
         <div class="project-card reveal" style="transition-delay:0.1s"
           data-type="AI / Optimisation"
           data-title="ClassForge Classroom Allocation System"
-          data-body="<p>Developed an AI-powered classroom allocation system designed to assign students into balanced classes using both academic and social factors. The project combined <strong>social network analysis</strong> and <strong>graph neural networks</strong> to model student relationships such as friendship, influence, isolation, and disruptive behaviour.</p><p>These outputs were then used within a <strong>CP-SAT optimisation</strong> framework to generate class allocations that balanced desirable and undesirable traits across multiple classes. The system also included an <strong>NLP-based customisation layer</strong> to let teachers provide natural language feedback and influence allocation constraints more intuitively.</p><p>This was one of my most advanced projects, bringing together machine learning, optimisation, graph-based modelling, and practical decision-support system design.</p>"
+          data-body="<p>Developed an AI-powered classroom allocation system designed to assign students into balanced classes using both academic and social factors. The project combined <strong>social network analysis</strong> and <strong>graph neural networks</strong> to model student relationships such as friendship, influence, isolation, and disruptive behaviour.</p><p>These outputs were then used within a <strong>CP-SAT optimisation</strong> framework to generate class allocations that balanced desirable and undesirable traits across multiple classes. The system also included an <strong>NLP-based customisation layer</strong> to let teachers provide natural language feedback and influence allocation constraints more intuitively.</p><p>This was one of my most advanced projects, bringing together machine learning, optimisation, graph-based modelling, and practical decision-support system design.</p><p style='margin-top:1.5rem'><a href='https://github.com/thinganhado/TIRP_ClassForge' target='_blank' rel='noopener' style='color:var(--accent);text-decoration:none;font-size:0.85rem;letter-spacing:0.05em;'>View on GitHub ↗</a></p>"
           data-tags="Python,Graph Neural Networks,R-GCN,Social Network Analysis,CP-SAT,NLP,Constraint Optimisation">
           <div class="project-type">AI / Optimisation</div>
           <div class="project-title">ClassForge Classroom Allocation System</div>
@@ -732,7 +757,7 @@
         <div class="project-card reveal" style="transition-delay:0.15s"
           data-type="Data Engineering / ML"
           data-title="Financial Fraud Detection Pipeline"
-          data-body="<p>Developed a real-time financial fraud analytics system using <strong>Kafka</strong>, <strong>Python</strong>, and <strong>Flask</strong>. The pipeline ingested transaction and behavioural events, scored them through separate machine learning services, and published analytics streams for downstream monitoring.</p><p>The local architecture was redesigned to operate without a database, using <strong>CSV-driven replay</strong> and in-memory aggregation for development and testing. A live <strong>Flask and SocketIO dashboard</strong> consumed the raw, scored, and analytics topics to display trends and geospatial outputs in near real time.</p><p>This project gave me experience in event-driven architecture, streaming data pipelines, model integration, and building analytics systems that bridge engineering and business use cases.</p>"
+          data-body="<p>Developed a real-time financial fraud analytics system using <strong>Kafka</strong>, <strong>Python</strong>, and <strong>Flask</strong>. The pipeline ingested transaction and behavioural events, scored them through separate machine learning services, and published analytics streams for downstream monitoring.</p><p>The local architecture was redesigned to operate without a database, using <strong>CSV-driven replay</strong> and in-memory aggregation for development and testing. A live <strong>Flask and SocketIO dashboard</strong> consumed the raw, scored, and analytics topics to display trends and geospatial outputs in near real time.</p><p>This project gave me experience in event-driven architecture, streaming data pipelines, model integration, and building analytics systems that bridge engineering and business use cases.</p><p style='margin-top:1.5rem'><a href='https://github.com/thinganhado/TAP' target='_blank' rel='noopener' style='color:var(--accent);text-decoration:none;font-size:0.85rem;letter-spacing:0.05em;'>View on GitHub ↗</a></p>"
           data-tags="Python,Kafka,Flask,Streaming Data,Machine Learning,Real-Time Analytics,SocketIO">
           <div class="project-type">Data Engineering / ML</div>
           <div class="project-title">Financial Fraud Detection Pipeline</div>
