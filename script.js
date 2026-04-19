@@ -10,11 +10,9 @@ if (window.matchMedia('(pointer: fine)').matches) {
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
 
     const now = Date.now();
-    if (now - lastTrailTime > 30) {
+    if (now - lastTrailTime > 50) {
       spawnTrailParticle(mouseX, mouseY);
       lastTrailTime = now;
     }
@@ -28,20 +26,19 @@ if (window.matchMedia('(pointer: fine)').matches) {
       width:${size}px; height:${size}px;
       left:${x}px; top:${y}px;
       background: rgba(0,212,255,${Math.random() * 0.4 + 0.1});
-      box-shadow: 0 0 ${size * 2}px rgba(0,212,255,0.3);
     `;
     trailContainer.appendChild(p);
     setTimeout(() => p.remove(), 600);
   }
 
-  function animateRing() {
+  function animateCursor() {
+    dot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
     ringX += (mouseX - ringX) * 0.12;
     ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
+    ring.style.transform = `translate(calc(${ringX}px - 50%), calc(${ringY}px - 50%))`;
+    requestAnimationFrame(animateCursor);
   }
-  animateRing();
+  animateCursor();
 
   document.querySelectorAll('a, button, .project-card, .skill-tag, .nav-logo').forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));

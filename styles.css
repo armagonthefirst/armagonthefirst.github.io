@@ -36,8 +36,8 @@ body {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s;
+  top: 0; left: 0;
+  will-change: transform;
   box-shadow: 0 0 12px var(--accent), 0 0 30px rgba(0,212,255,0.4);
 }
 #cursor-ring {
@@ -47,7 +47,8 @@ body {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  transform: translate(-50%, -50%);
+  top: 0; left: 0;
+  will-change: transform;
   transition: width 0.2s, height 0.2s, opacity 0.2s;
 }
 #cursor-ring.hover {
