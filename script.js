@@ -54,8 +54,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('visible');
       entry.target.classList.remove('hidden');
     } else {
-      const rect = entry.target.getBoundingClientRect();
-      if (rect.top < 0) {
+      if (entry.boundingClientRect.top < 0) {
         entry.target.classList.add('hidden');
         entry.target.classList.remove('visible');
       } else {

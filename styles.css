@@ -250,8 +250,8 @@ section { position: relative; z-index: 2; }
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0,255,136,0.4); }
-  50% { opacity: 0.8; box-shadow: 0 0 0 4px rgba(0,255,136,0); }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.4); }
 }
 
 /* ── SCROLL REVEAL ── */
@@ -345,7 +345,7 @@ section { position: relative; z-index: 2; }
   color: var(--text);
   background: rgba(0,212,255,0.03);
   letter-spacing: 0.03em;
-  transition: all 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .skill-tag:hover {
   border-color: var(--accent);
@@ -368,6 +368,7 @@ section { position: relative; z-index: 2; }
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  will-change: transform;
 }
 .project-card::after {
   content: '';
@@ -449,6 +450,7 @@ section { position: relative; z-index: 2; }
   pointer-events: none;
   transition: opacity 0.3s;
   backdrop-filter: blur(8px);
+  will-change: opacity;
 }
 #modal-overlay.open {
   opacity: 1;
@@ -490,7 +492,7 @@ section { position: relative; z-index: 2; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 #modal-close:hover { border-color: var(--accent); color: var(--accent); }
 .modal-type {
