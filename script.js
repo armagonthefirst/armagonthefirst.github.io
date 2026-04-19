@@ -2,34 +2,13 @@
 if (window.matchMedia('(pointer: fine)').matches) {
   const dot = document.getElementById('cursor-dot');
   const ring = document.getElementById('cursor-ring');
-  const trailContainer = document.getElementById('cursor-trail-container');
   let mouseX = 0, mouseY = 0;
   let ringX = 0, ringY = 0;
-  let lastTrailTime = 0;
 
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-
-    const now = Date.now();
-    if (now - lastTrailTime > 50) {
-      spawnTrailParticle(mouseX, mouseY);
-      lastTrailTime = now;
-    }
   });
-
-  function spawnTrailParticle(x, y) {
-    const p = document.createElement('div');
-    p.classList.add('trail-particle');
-    const size = Math.random() * 4 + 2;
-    p.style.cssText = `
-      width:${size}px; height:${size}px;
-      left:${x}px; top:${y}px;
-      background: rgba(0,212,255,${Math.random() * 0.4 + 0.1});
-    `;
-    trailContainer.appendChild(p);
-    setTimeout(() => p.remove(), 600);
-  }
 
   function animateCursor() {
     dot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
