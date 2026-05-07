@@ -386,9 +386,9 @@ section { position: relative; z-index: 2; }
 .project-card:hover::after { opacity: 1; }
 
 .project-role {
-  font-family: var(--sans);
+  font-family: var(--body);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--white);
   letter-spacing: -0.01em;
   margin-bottom: 0.25rem;
@@ -522,9 +522,9 @@ section { position: relative; z-index: 2; }
   margin-bottom: 0.8rem;
 }
 .modal-title {
-  font-family: var(--sans);
+  font-family: var(--body);
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--white);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
